@@ -17,6 +17,8 @@ library(ggplot2)
 ## Problem 1
 
 The dataset has `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns.
+The mean temperature is approximately `r round(mean(early_january_weather$temp, na.rm = TRUE), 2)`.
+Variables include: `r paste(names(early_january_weather), collapse = ", ")`.
 
 ```{r}
 data("early_january_weather")
@@ -28,7 +30,7 @@ data("early_january_weather")
 You can also embed plots, for example:
 
 ```{r pressure, echo=FALSE}
-plot(pressure)
+
 ```
 
 

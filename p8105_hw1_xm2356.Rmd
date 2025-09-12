@@ -10,6 +10,8 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(moderndive)
+library(ggplot2)
 ```
 
 ## R Markdown

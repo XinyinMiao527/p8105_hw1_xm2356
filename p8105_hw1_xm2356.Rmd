@@ -14,17 +14,16 @@ library(moderndive)
 library(ggplot2)
 ```
 
-## R Markdown
+## Problem 1
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+The dataset has `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r}
+data("early_january_weather")
 ```
 
-## Including Plots
+
+## Problem 2
 
 You can also embed plots, for example:
 
@@ -32,4 +31,4 @@ You can also embed plots, for example:
 plot(pressure)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+

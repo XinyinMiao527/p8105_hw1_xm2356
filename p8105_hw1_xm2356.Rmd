@@ -40,6 +40,12 @@ p_temp_time <- ggplot(early_january_weather,
 p_temp_time
 ```
 
+## Export the plot
+```{r}
+ggsave("temp_vs_time.png", plot = p_temp_time, width = 7, height = 4)
+file.exists("temp_vs_time.png")
+```
+
 
 # Problem 2
 

@@ -49,9 +49,10 @@ file.exists("temp_vs_time.png")
 
 # Problem 2
 
-You can also embed plots, for example:
+Create a data frame with four types of variables and explore means.
 
-```{r pressure, echo=FALSE}
+```{r}
+
 
 ```
 

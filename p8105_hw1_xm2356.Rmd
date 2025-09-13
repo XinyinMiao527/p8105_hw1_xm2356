@@ -52,8 +52,21 @@ file.exists("temp_vs_time.png")
 Create a data frame with four types of variables and explore means.
 
 ```{r}
+set.seed(123)
+sample_numeric <-  rnorm(10)
+sample_logical <-  sample_numeric > 0
+sample_character <-  c("apple", "banana", "fish", "dog", "cat", "man", "woman", "book", "store", "test")
+sample_factor <- factor(sample(c("low", "medium", "high"), size = 10, replace = TRUE), levels = c("low", "medium", "high"))
 
+library(tibble)
+df_types <- tibble(
+  number = sample_numeric, 
+  is_positive = sample_logical,
+  label = sample_character,
+  group = sample_factor
+)
 
+df_types
 ```
 
 

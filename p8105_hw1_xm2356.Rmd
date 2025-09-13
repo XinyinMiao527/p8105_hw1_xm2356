@@ -50,7 +50,8 @@ file.exists("temp_vs_time.png")
 
 # Problem 2
 
-Create a data frame with four types of variables and explore means.
+## Create a data frame
+It involves four types of variables and explore means.
 
 ```{r}
 set.seed(123)
@@ -70,7 +71,7 @@ df_types <- tibble(
 df_types
 ```
 
-Take the mean of each variable
+## Mean of each variable
 
 ```{r}
 mean(df_types %>% pull(number))
@@ -78,7 +79,23 @@ mean(df_types %>% pull(is_positive))
 mean(df_types %>% pull(label))  # Error: character vectors have no mean
 mean(df_types %>% pull(group)) # Factors can not be averaged directly
 
-
 ```
+
+## Use as.numeric()
+
+```{r echo = TRUE, results = 'hide', warning = FALSE, message=FALSE}
+as.numeric(df_types$is_positive)
+as.numeric(df_types$label)
+as.numeric(df_types$group)
+```
+
+
+
+
+
+
+
+
+
 
 

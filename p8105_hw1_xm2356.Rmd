@@ -12,6 +12,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 library(moderndive)
 library(ggplot2)
+library(tidyverse)
 ```
 
 # Problem 1
@@ -67,6 +68,17 @@ df_types <- tibble(
 )
 
 df_types
+```
+
+Take the mean of each variable
+
+```{r}
+mean(df_types %>% pull(number))
+mean(df_types %>% pull(is_positive))
+mean(df_types %>% pull(label))  # Error: character vectors have no mean
+mean(df_types %>% pull(group)) # Factors can not be averaged directly
+
+
 ```
 
 

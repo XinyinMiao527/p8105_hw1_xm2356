@@ -89,6 +89,12 @@ as.numeric(df_types$label)
 as.numeric(df_types$group)
 ```
 
+## Explanation
+
+"number" is numeric, so the mean works directly.
+"is_positive" is logical, TRUE/FALSE are treated as 1/0, so the mean is the proportion of TRUE.
+"label" is character, coercion gives NA.
+"group" is a factor, as.numeric() returns the internal level codes, not the labels. To get numeric values of the labels, use as.numeric(as.character(group)).
 
 
 

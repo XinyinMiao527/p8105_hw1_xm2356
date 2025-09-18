@@ -11,7 +11,6 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(moderndive)
-library(ggplot2)
 library(tidyverse)
 ```
 
@@ -19,13 +18,14 @@ library(tidyverse)
 
 ## Dataset description
 
+```{r}
+data("early_january_weather")
+```
+
 The dataset has `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns.
 The mean temperature is approximately `r round(mean(early_january_weather$temp, na.rm = TRUE), 2)`.
 Variables include: `r paste(names(early_january_weather), collapse = ", ")`.
 
-```{r}
-data("early_january_weather")
-```
 
 ## Scatterplot
 ```{r}
@@ -44,7 +44,6 @@ p_temp_time
 ## Export the plot
 ```{r}
 ggsave("temp_vs_time.png", plot = p_temp_time, width = 7, height = 4)
-file.exists("temp_vs_time.png")
 ```
 
 
@@ -77,7 +76,7 @@ df_types
 mean(df_types %>% pull(number))
 mean(df_types %>% pull(is_positive))
 mean(df_types %>% pull(label))  # Error: character vectors have no mean
-mean(df_types %>% pull(group)) # Factors can not be averaged directly
+mean(df_types %>% pull(group)) # Error: Factors can not be averaged directly
 
 ```
 

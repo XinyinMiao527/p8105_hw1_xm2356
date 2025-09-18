@@ -41,6 +41,11 @@ p_temp_time <- ggplot(early_january_weather,
 p_temp_time
 ```
 
+From the scatterplot, temperature shows a clear daily cycle: it tends to be
+lowest in the early morning and highest in the afternoon.  
+Humidity is higher when the temperature is lower, and drops as the day warms.  
+
+
 ## Export the plot
 ```{r}
 ggsave("temp_vs_time.png", plot = p_temp_time, width = 7, height = 4)
